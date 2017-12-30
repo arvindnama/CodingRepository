@@ -1,6 +1,4 @@
-var GraphLib = require('./_datastructure');
-var Node = GraphLib.Node;
-var Graph = GraphLib.Graph;
+const {Node , Graph} = require('./_datastructure');
 
 var DFS = function(g , s){
   var visited = [];

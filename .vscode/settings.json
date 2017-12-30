@@ -32,6 +32,9 @@
         "external-amd":true,
         ".vs":true
     },
+    "jshint.options": {
+        "esversion": 6
+    },
     "editor.renderWhitespace": "all",
     "typescript.referencesCodeLens.enabled": false
   }

@@ -9,6 +9,9 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
+      "args": [
+        "--experimental-modules"
+      ],
       "program": "${file}"
     }
   ]
