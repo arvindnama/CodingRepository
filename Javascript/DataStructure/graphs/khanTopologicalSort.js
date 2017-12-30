@@ -20,7 +20,7 @@ var kahnTopologicalSort = function(g){
     if(indegree[ver] === 0){
       queue.push(ver);
     }
-  };
+  }
   while(queue.length>0){
     let ver = queue.shift();
     order += `${ver} `;
