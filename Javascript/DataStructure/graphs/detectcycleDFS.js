@@ -13,7 +13,7 @@ var isCycle = function(g){
       var head = g.getAdjNodes(v);
       while(head){
         let destV = head.val;
-        if(visited[destV] === false && hasCycleInVertex(destV)){
+        if(!visited[destV] && hasCycleInVertex(destV)){
           return true;
         } else if(recStack[destV]){
           return true;

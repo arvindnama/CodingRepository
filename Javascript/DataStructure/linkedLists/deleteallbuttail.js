@@ -20,6 +20,7 @@ var deleteNode = function(node) {
   while(node.next){
       var temp = node.next;
       node.next = null;
+      delete node;
       node = temp;
   }
   return node;

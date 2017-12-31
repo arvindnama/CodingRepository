@@ -13,9 +13,9 @@ var reverse = function(a , s ,e){
 }
 var rotateR = function(a ,d ){
   var n = a.length -1;
-  rotate(a , 0, d -1);
-  rotate(a , d , n);
-  rotate(a , 0, n);
+  reverse(a , 0, d -1);
+  reverse(a , d , n);
+  reverse(a , 0, n);
   return a;
 }
 var rotate = function(a , d){
