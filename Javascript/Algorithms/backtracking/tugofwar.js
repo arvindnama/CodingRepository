@@ -6,30 +6,27 @@
 */
 
 let tugOfWar = function(arr){
-  let selectedArr;
-  let minDiff = Number.MAX_VALUE;
-  let sum = 0, n = arr.length;
-  arr.forEach(e => {sum +=e;});
-
-  let tugOfWarR = function(curIdx , noOfSelected , curSelected, curSum){
+  let selectedArr, n = arr.length, sum = 0, minDiff = Number.MAX_VALUE;
+  arr.forEach(e=> sum+=e);
+  let tugOfWarR = (curIdx , curSelected, noOfSelected, curSum)=>{
     if(curIdx === n) return;
-    if((Math.floor(n/2) - noOfSelected) > (n - curIdx)) return;
-    tugOfWarR(curIdx+1 , noOfSelected , curSelected, curSum);
+    if(Math.floor(n/2) - noOfSelected > (n - curIdx)) return;
+    tugOfWarR(curIdx+1 , curSelected, noOfSelected , curSum);
     noOfSelected++;
-    curSelected[curIdx] = true;
     curSum += arr[curIdx];
+    curSelected[curIdx] = true;
     if(Math.floor(n/2) === noOfSelected){
       let curDiff = Math.abs(Math.floor(sum/2) - curSum);
-      if( curDiff < minDiff){
+      if(curDiff < minDiff){
         minDiff = curDiff;
-        selectedArr = curSelected.map((i)=>i);
-      }  
+        selectedArr = curSelected.map((e)=>e);
+      }
     } else {
-      tugOfWarR(curIdx+1 , noOfSelected,curSelected, curSum);
+      tugOfWarR(curIdx+1 , curSelected, noOfSelected,curSum);
     }
     curSelected[curIdx] = false;
   };
-  tugOfWarR(0,0,arr.map(()=>false),0);
+  tugOfWarR(0,arr.map((i)=>false),0,0);
   let set1 = arr.filter((e,idx) => selectedArr[idx]);
   let set2 = arr.filter((e,idx) => !selectedArr[idx]);
   console.log("set1",set1);
@@ -37,4 +34,9 @@ let tugOfWar = function(arr){
 };
 
 let  arr= [3, 4, 5, -3, 100, 1, 89, 54, 23, 20];
+console.log("Arr1",arr);
+tugOfWar(arr);
+
+arr= [23, 45, -34, 12, 0, 98, -99, 4, 189, -1, 4];
+console.log("Arr2",arr);
 tugOfWar(arr);
