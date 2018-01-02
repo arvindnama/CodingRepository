@@ -78,3 +78,14 @@ var g = [
   [0, 0, 5,  2, 0, 6,  3, 0, 0]
 ];
 solveSudoku(g);
+
+/*
+var g2 = [];
+for(let i = 0 ; i < 9 ; i++){
+  g2[i] = [];
+  for(let j = 0 ; j < 9 ; j++){
+    g2[i][j] = 0;
+  }
+}
+solveSudoku(g2);
+*/
