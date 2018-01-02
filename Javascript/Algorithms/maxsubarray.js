@@ -10,9 +10,4 @@ var maxsubarray = function(A){
   return ans;
 }
 
-maxsubarrayR = function(A){
-  var max = function(A, s,e){
-
-  };
-}
 console.log("Result::"+ maxsubarray([ -2, 1, -3, 4, -1, 2, 1, -5, 4 ]));
