@@ -31,8 +31,10 @@ var findInRotated1 = function(arr , k){
 var findInRotated = function(arr, k ){
   let s = 0 , e = arr.length -1;
   let search = (s,e) =>{
-    if(s > e) return -1;
     let m = Math.floor((s+e)/2);
+    if(s > e) return -1;
+    if(arr[s] === k) return s;
+    if(arr[e] === k) return e;
     if(arr[m] === k) return m;
     if(arr[s] < arr[m]){
       if(k >= arr[s] && k <= arr[m])
