@@ -22,7 +22,11 @@ let rotateMatrix = (matrix , clockwise)=>{
     if(t > b || l > r) return;
     //console.log('pass');
     for(let i = l; i < r; i++){
-      clockwise ? clockWizeSwap(t,b,l,r,i) : antiClockWizeSwap(t,b,l,r,i);
+      if(clockwise){
+         clockWizeSwap(t,b,l,r,i);
+      } else {
+        antiClockWizeSwap(t,b,l,r,i);
+      }
     }
     t++; b--; l++; r--;
     rotateRec(t,b,l,r);
