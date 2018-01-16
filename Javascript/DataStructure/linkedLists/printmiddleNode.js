@@ -14,7 +14,7 @@ var printList = function (head){
 
 var printMiddle= function(h){
   var mid = h;
-  while(h && h.next){
+  while(h.next){
     h = h.next.next;
     mid = mid.next;
   }

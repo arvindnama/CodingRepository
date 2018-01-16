@@ -14,16 +14,15 @@ var printList = function (head,n){
 }
 
 var reverseCircular = function(h){
-  var current = h.next, prev = h, next=current;
+  var current = h.next, prev = h;
   while(current!==h){
-    next = current.next;
+    let temp = current.next;
     current.next = prev;
     prev = current;
-    current = next;
+    current = temp;
   }
   h.next = prev;
-  h = prev;
-  return h;
+  return prev;
 }
 
 var h = new ListNode(2);
