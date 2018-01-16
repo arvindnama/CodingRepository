@@ -24,9 +24,7 @@ var insert = function(head , n){
     }
   }
   prev.next = node;
-  if(current){
-    node.next = current;
-  }
+  node.next = current;
   return head;
 };
 
@@ -37,4 +35,4 @@ r.next = new ListNode(9); r= r.next;
 r.next = new ListNode(10); r= r.next;
 r.next = new ListNode(15); r= r.next;
 
-printList(insert(h , 1));
+printList(insert(h , 16));
