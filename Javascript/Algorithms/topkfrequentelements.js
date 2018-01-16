@@ -14,4 +14,4 @@ var topKFrequent = function(nums, k) {
     return keys.filter((e,idx)=> idx<k).map((e)=>+e);
 };
 
-console.log(topKFrequent([6,0,1,4,9,7,-3,1,-4,-8,4,-7,-3,3,2,-3,9,5,-4,0],6));
+console.log(topKFrequent([1,1,1,1,2,2,3],2));
