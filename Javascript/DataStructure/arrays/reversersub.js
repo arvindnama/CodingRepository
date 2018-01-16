@@ -2,12 +2,12 @@ var reverseSub = function(a){
   var reverseR = function(a , start , end){
     var i = start, res="";
     while(i < end && a[i]!==' '){
-      res = a[i] + res;
+      res = res + a[i];
       i++;
     }
+    res +=' ';
     if(a[i] === ' '){
-      res +=' ';
-      res += reverseR(a , i+1 , end);
+      res = reverseR(a , i+1 , end) + res;
     }
     return res;
   }
