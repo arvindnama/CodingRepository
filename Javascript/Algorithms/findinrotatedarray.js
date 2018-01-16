@@ -29,7 +29,6 @@ var findInRotated1 = function(arr , k){
 };
 
 var findInRotated = function(arr, k ){
-  let s = 0 , e = arr.length -1;
   let search = (s,e) =>{
     let m = Math.floor((s+e)/2);
     if(s > e) return -1;
@@ -45,9 +44,9 @@ var findInRotated = function(arr, k ){
       return search(m +1  , e);
     return search(s , m -1);
   };
-  return search(s ,e);
+  return search(0 ,arr.length -1);
 };
-//console.log(findInRotated([5, 1, 2, 3, 4],4));
+console.log(findInRotated([5, 1, 2, 3, 4],1));
 console.log(findInRotated([4, 5, 6, 7, 0, 1, 2],2));
 
 
