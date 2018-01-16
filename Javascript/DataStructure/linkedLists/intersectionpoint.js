@@ -14,9 +14,8 @@ var printList = function (head){
 var findIntersection = function(h1 , h2){
   var h1Temp = h1;
   var h2Temp = h2;
-  var h1Count =0;
+  var h1Count = 1;
   while(h1Temp.next !== null) {h1Count++; h1Temp = h1Temp.next;}
-  h1Count++;
   h1Temp.next = h1; // create loop;
 
   for(var i = 0 ; i< h1Count;i++){
