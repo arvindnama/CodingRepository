@@ -13,7 +13,6 @@ var printList = function (head){
 
 var length = function(h){
   if(!h) return 0; 
-  if(!h.next) return 1;
   return 1+length(h.next);
 };
 
