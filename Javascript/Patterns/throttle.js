@@ -5,9 +5,9 @@ var throttle = function(cb , context , delay){
     if(!inProg){
       inProg = true;
       cb.apply(context || window , a);
+      setTimeout(function(){ inProg = false;},delay);
     }
-    setTimeout(function(){ inProg = false;},delay);
-  }
+  };
 };
 
 var throttleDelayed = function(cb , context , delay){
@@ -22,5 +22,5 @@ var throttleDelayed = function(cb , context , delay){
       }, delay);
       
     }
-  }
-} 
+  };
+};
