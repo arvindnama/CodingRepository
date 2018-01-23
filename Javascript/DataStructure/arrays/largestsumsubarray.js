@@ -5,8 +5,8 @@ var largestSum = function(a){
   for(var i = 0 ; i < a.length;i++){
      cur_Max = cur_Max + a[i];
      max = Math.max(cur_Max , max);
-     if(cur_Max <0){
-      cur_Max = 0;
+     if(cur_Max < a[i]){
+      cur_Max = a[i];
      }
   }
   return max;
